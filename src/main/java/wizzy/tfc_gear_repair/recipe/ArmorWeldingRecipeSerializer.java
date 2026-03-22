@@ -1,7 +1,6 @@
 package wizzy.tfc_gear_repair.recipe;
 
 import com.google.gson.JsonObject;
-import com.mojang.logging.LogUtils;
 import net.dries007.tfc.common.recipes.outputs.ItemStackProvider;
 import net.minecraft.core.RegistryAccess;
 import net.minecraft.network.FriendlyByteBuf;
@@ -10,11 +9,7 @@ import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.util.GsonHelper;
 
-import org.slf4j.Logger;
-
 public class ArmorWeldingRecipeSerializer implements RecipeSerializer<ArmorWeldingRecipe> {
-
-    private static final Logger LOGGER = LogUtils.getLogger();
 
     @Override
     public ArmorWeldingRecipe fromJson(ResourceLocation recipeId, JsonObject json) {
@@ -28,7 +23,6 @@ public class ArmorWeldingRecipeSerializer implements RecipeSerializer<ArmorWeldi
 
     @Override
     public ArmorWeldingRecipe fromNetwork(ResourceLocation recipeId, FriendlyByteBuf buffer) {
-        // Read from server to client sync
         Ingredient input1 = Ingredient.fromNetwork(buffer);
         Ingredient input2 = Ingredient.fromNetwork(buffer);
         int tier = buffer.readVarInt();

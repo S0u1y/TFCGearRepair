@@ -16,7 +16,6 @@ public class ModDataGenerator {
         DataGenerator generator = event.getGenerator();
         PackOutput packOutput = generator.getPackOutput();
 
-        // Register our new recipe provider
         generator.addProvider(event.includeServer(), new ModRecipeProvider(packOutput));
     }
 }

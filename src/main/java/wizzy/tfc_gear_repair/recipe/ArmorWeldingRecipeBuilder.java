@@ -20,7 +20,6 @@ public class ArmorWeldingRecipeBuilder implements FinishedRecipe {
 
     @Override
     public void serializeRecipeData(JsonObject json) {
-        // This matches your custom JSON structure perfectly
         json.addProperty("tier", this.tier);
 
         JsonObject input1 = new JsonObject();
@@ -43,13 +42,12 @@ public class ArmorWeldingRecipeBuilder implements FinishedRecipe {
 
     @Override
     public RecipeSerializer<?> getType() {
-        // Point this to the custom serializer we made earlier!
         return ModRecipeRegistry.ARMOR_WELDING_SERIALIZER.get();
     }
 
     @Override
     public JsonObject serializeAdvancement() {
-        return null; // We can skip advancements for this
+        return null;
     }
 
     @Override

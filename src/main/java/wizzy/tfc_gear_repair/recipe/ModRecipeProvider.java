@@ -16,24 +16,17 @@ public class ModRecipeProvider extends RecipeProvider {
 
     @Override
     protected void buildRecipes(Consumer<FinishedRecipe> consumer) {
-        // 1. Define TFC's standard armor metals
-        // Note: You might need to adjust the anvil tier based on the metal in a real scenario
         String[] metals = {"copper", "bismuth_bronze", "black_bronze", "bronze", "wrought_iron", "steel", "black_steel", "blue_steel", "red_steel"};
 
-        // 2. Define TFC's armor types
         String[] parts = {"helmet", "chestplate", "greaves", "boots"};
 
-        // 3. Loop through every combination!
         for (String metal : metals) {
             for (String part : parts) {
-                // Construct the TFC item IDs (e.g., "tfc:metal/chestplate/bronze")
                 String armorItemId = "tfc:metal/" + part + "/" + metal;
                 String sheetItemId = "tfc:metal/sheet/" + metal;
 
-                // Create a unique file name for the JSON (e.g., "your_mod_id:welding_repair_bronze_chestplate")
                 ResourceLocation recipeId = ResourceLocation.fromNamespaceAndPath(MODID, "welding_repair_" + metal + "_" + part);
 
-                // Generate it! (Assuming a flat tier 2 for this example)
                 consumer.accept(new ArmorWeldingRecipeBuilder(recipeId, sheetItemId, armorItemId, 2));
             }
         }
