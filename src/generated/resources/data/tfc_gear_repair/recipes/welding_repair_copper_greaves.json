@@ -1,0 +1,13 @@
+{
+  "type": "tfc_gear_repair:armor_welding",
+  "first_input": {
+    "item": "tfc:metal/sheet/copper"
+  },
+  "result": {
+    "item": "tfc:metal/greaves/copper"
+  },
+  "second_input": {
+    "item": "tfc:metal/greaves/copper"
+  },
+  "tier": 2
+}

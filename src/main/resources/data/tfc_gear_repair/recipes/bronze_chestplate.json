@@ -1,0 +1,14 @@
+{
+  "type": "tfc_gear_repair:armor_welding",
+  "tier": 2,
+  "first_input": {
+    "item": "tfc:metal/sheet/bronze"
+  },
+  "second_input": {
+    "item": "tfc:metal/chestplate/bronze"
+  },
+  "result": {
+    "count": 1,
+    "item": "tfc:metal/chestplate/bronze"
+  }
+}

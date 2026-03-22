@@ -1,0 +1,13 @@
+{
+  "type": "tfc_gear_repair:armor_welding",
+  "first_input": {
+    "item": "tfc:metal/sheet/steel"
+  },
+  "result": {
+    "item": "tfc:metal/boots/steel"
+  },
+  "second_input": {
+    "item": "tfc:metal/boots/steel"
+  },
+  "tier": 2
+}
